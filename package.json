@@ -1,0 +1,19 @@
+{
+  "name": "control-de-ordenes",
+  "version": "1.0.0",
+  "description": "back-end de control-de-ordenes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseLuisAza/node-control-de-ordenes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseLuisAza/node-control-de-ordenes/issues"
+  },
+  "homepage": "https://github.com/JoseLuisAza/node-control-de-ordenes#readme"
+}
