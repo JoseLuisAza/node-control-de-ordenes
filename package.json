@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/JoseLuisAza/node-control-de-ordenes/issues"
   },
-  "homepage": "https://github.com/JoseLuisAza/node-control-de-ordenes#readme"
+  "homepage": "https://github.com/JoseLuisAza/node-control-de-ordenes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "moment": "^2.29.1",
+    "momentsjs": "^2.27.4",
+    "mysql": "^2.18.1"
+  }
 }
