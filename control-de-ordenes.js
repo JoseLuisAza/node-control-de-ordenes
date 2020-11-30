@@ -12,7 +12,7 @@ const port = 3000;//puerto donde va a escuchar el servidor
 var connection = mysql.createConnection({//configuracion para conecciond de base de datos
   host     : 'localhost',
   user     : 'root',
-  password : '@Sangreazul1',
+  password : '',
   database : 'control-de-ordenes'
 });
 
@@ -80,7 +80,7 @@ app.use(function (req, res, next)
 
   app.post('/getArticulos', (req, res) => {
     console.log('/getArticulos');
-    connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE vendedor_idvendedor="'+req.fields.user_id+'"', function (error, results, fields) {
+    connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE estado="activo" AND vendedor_idvendedor="'+req.fields.user_id+'"', function (error, results, fields) {
         if (error)
         {
           throw error;
@@ -88,14 +88,14 @@ app.use(function (req, res, next)
         console.log(results.length);
     setTimeout(() => {
       res.status(200).send(JSON.stringify(results));
-    }, 2000);     
+    }, 1500);     
 
   });
 });
 
 app.post('/getArticulosGeneral', (req, res) => {
-  console.log('/getArticulos');
-  connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE vendedor_idvendedor !="'+req.fields.user_id+'"', function (error, results, fields) {
+  console.log('/getArticulosGeneral');
+  connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE estado="activo" AND vendedor_idvendedor !="'+req.fields.user_id+'"', function (error, results, fields) {
       if (error)
       {
         throw error;
@@ -103,14 +103,14 @@ app.post('/getArticulosGeneral', (req, res) => {
       console.log(results.length);
   setTimeout(() => {
     res.status(200).send(JSON.stringify(results));
-  }, 2000);     
+  }, 300);     
 
 });
 });
 
 app.get('/getArticulosStore', (req, res) => {
-  console.log('/getArticulos');
-  connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto', function (error, results, fields) {
+  console.log('/getArticulosStore');
+  connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE estado="activo"', function (error, results, fields) {
       if (error)
       {
         throw error;
@@ -118,7 +118,7 @@ app.get('/getArticulosStore', (req, res) => {
       console.log(results.length);
   setTimeout(() => {
     res.status(200).send(JSON.stringify(results));
-  }, 2000);     
+  }, 1500);     
 
 });
 });
@@ -190,7 +190,7 @@ app.get('/getArticulosStore', (req, res) => {
 app.post('/deleteItem',  (req, res)=> {
   console.log('deleteItem');
   console.log(req.fields);
-  connection.query('DELETE FROM producto WHERE idproducto='+req.fields.iditem+' AND vendedor_idvendedor="'+req.fields.user_id+'"', function (error, results, fields) {
+  connection.query('UPDATE producto set estado="inactivo" WHERE idproducto='+req.fields.idproducto, function (error, results, fields) {
     if (error) throw error;
     console.log(results.affectedRows);
     //Eliminamos el fichero si y solo si fue eliminado de la base de datos
@@ -198,7 +198,7 @@ app.post('/deleteItem',  (req, res)=> {
     {
         try //try catch para manejar los errores
         {
-          fs.unlinkSync(req.fields.path.toString());
+          //fs.unlinkSync(req.fields.path.toString());
           res.status(200).send(JSON.stringify(results));
         }catch(err)
         {
@@ -209,5 +209,38 @@ app.post('/deleteItem',  (req, res)=> {
     else{
       res.status(200).send(JSON.stringify(results));
     }
+  });
+});
+
+app.post('/updateItem',  (req, res)=> {
+  console.log('updateItem');
+  connection.query('UPDATE producto set nombre="'+req.fields.nombre+'",precio='+req.fields.precio+',detalle="'+req.fields.detalles+'" WHERE idproducto='+req.fields.idproducto, function (error, results, fields) {
+    if (error) throw error;
+    console.log(results.affectedRows);
+    //Eliminamos el fichero si y solo si fue eliminado de la base de datos
+    res.status(200).send(JSON.stringify(results));
+
+  });
+});
+
+app.post('/finishShop',  (req, res)=> {
+  console.log('finishShop');
+  let date=moment().format('YYYY-MM-DD hh:mm:ss');//obtenemos la fecha y hora
+  connection.query('INSERT INTO venta(fecha_de_venta,total,vendedor_idvendedor) VALUES("'+date+'",'+req.fields.total+',"'+req.fields.user_id+'")', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results.affectedRows);
+    //Eliminamos el fichero si y solo si fue eliminado de la base de datos
+    res.status(200).send(JSON.stringify(results));
+  });
+});
+
+app.post('/finishShop2',  (req, res)=> {
+  console.log('finishShop2');
+  let date=moment().format('YYYY-MM-DD hh:mm:ss');//obtenemos la fecha y hora
+  connection.query('INSERT INTO detalle_venta(producto_idproducto,venta_idventa,cantidad,subtotal) VALUES("'+date+'","'+req.fields.total+'",) ,precio='+req.fields.precio+',detalle="'+req.fields.detalles+'" WHERE idproducto='+req.fields.idproducto, function (error, results, fields) {
+    if (error) throw error;
+    console.log(results.affectedRows);
+    //Eliminamos el fichero si y solo si fue eliminado de la base de datos
+    res.status(200).send(JSON.stringify(results));
   });
 });
