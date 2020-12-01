@@ -13,7 +13,7 @@ const port = 3000;//puerto donde va a escuchar el servidor
 var connection = mysql.createConnection({//configuracion para conecciond de base de datos
   host     : 'localhost',
   user     : 'root',
-  password : '@Sangreazul1',
+  password : '',
   database : 'control-de-ordenes'
 });
 
