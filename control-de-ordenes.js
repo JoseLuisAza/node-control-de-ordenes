@@ -4,6 +4,7 @@ var mysql= require('mysql');//modulo para conectar con myslq database
 var moment = require('moment'); //modulo para trabajar con fechas
 const cors = require('cors');//modulo para activar el CORS para solicitudes de varios puertos
 const fs = require('fs');//modulo de node para manejar archivos y carpetas
+const rxjs = require('rxjs');//modulo de node para manejar archivos y carpetas
 const formidableMiddleware = require('express-formidable');//para manejar multipart/form-data
 
 /*Variables y Constantes */
@@ -12,7 +13,7 @@ const port = 3000;//puerto donde va a escuchar el servidor
 var connection = mysql.createConnection({//configuracion para conecciond de base de datos
   host     : 'localhost',
   user     : 'root',
-  password : '',
+  password : '@Sangreazul1',
   database : 'control-de-ordenes'
 });
 
@@ -228,7 +229,7 @@ app.post('/finishShop',  (req, res)=> {
   let date=moment().format('YYYY-MM-DD hh:mm:ss');//obtenemos la fecha y hora
   connection.query('INSERT INTO venta(fecha_de_venta,total,vendedor_idvendedor) VALUES("'+date+'",'+req.fields.total+',"'+req.fields.user_id+'")', function (error, results, fields) {
     if (error) throw error;
-    console.log(results.affectedRows);
+    console.log(results);
     //Eliminamos el fichero si y solo si fue eliminado de la base de datos
     res.status(200).send(JSON.stringify(results));
   });
@@ -236,11 +237,29 @@ app.post('/finishShop',  (req, res)=> {
 
 app.post('/finishShop2',  (req, res)=> {
   console.log('finishShop2');
-  let date=moment().format('YYYY-MM-DD hh:mm:ss');//obtenemos la fecha y hora
-  connection.query('INSERT INTO detalle_venta(producto_idproducto,venta_idventa,cantidad,subtotal) VALUES("'+date+'","'+req.fields.total+'",) ,precio='+req.fields.precio+',detalle="'+req.fields.detalles+'" WHERE idproducto='+req.fields.idproducto, function (error, results, fields) {
-    if (error) throw error;
-    console.log(results.affectedRows);
-    //Eliminamos el fichero si y solo si fue eliminado de la base de datos
-    res.status(200).send(JSON.stringify(results));
+  var affectedRows=0;
+  const obs$=new rxjs.Observable(subscriber => {
+    let cont=0;
+      for (const property in req.fields) 
+      {
+          connection.query(`INSERT INTO detalle_venta(producto_idproducto,venta_idventa,cantidad,subtotal) VALUES(${req.fields[property].idproducto},${req.fields[property].idventa},${req.fields[property].cantidad},${req.fields[property].subtotal})`, function (error, results, fields) {
+          if (error) throw error;
+          affectedRows=affectedRows+results.affectedRows;
+          cont++;
+          if(cont==Object.keys(req.fields).length)
+          {
+            subscriber.next(affectedRows);
+          }
+          });
+      }
+
+
   });
+
+  obs$.subscribe(
+    data=>{
+      console.log('affectedRows '+ data);
+      res.status(200).send(JSON.stringify(data));
+    }
+  );
 });
