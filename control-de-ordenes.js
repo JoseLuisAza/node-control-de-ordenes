@@ -146,7 +146,7 @@ app.get('/getArticulosStore', (req, res) => {
           })
           console.log('directorio '+dir+" creado!");//mostramos mensaje en consola si no hubo errores
           fs.writeFileSync(file, fs.readFileSync(path));//Escribimos al directorio nuevo del directorio viejo
-          connection.query('INSERT INTO producto(nombre,precio,ruta,detalle,fecha_creado,vendedor_idvendedor) VALUES("'+req.fields.nombre+'","'+req.fields.precio+'","'+file+'","'+req.fields.detalles+'","'+date+'","'+user_id+'")', function (error, results, fields) {
+          connection.query('INSERT INTO producto(nombre,precio,ruta,detalle,fecha_creado,vendedor_idvendedor,estado) VALUES("'+req.fields.nombre+'","'+req.fields.precio+'","'+file+'","'+req.fields.detalles+'","'+date+'","'+user_id+'","activo")', function (error, results, fields) {
             if (error) throw error;
             console.info('Archivo subido! ');//si no hubo ningun problema con el copiado
             res.status(201).send('Libro subido');//respondemos con codigo de status ok
@@ -161,7 +161,7 @@ app.get('/getArticulosStore', (req, res) => {
         } catch (err) {
           console.error(err)//mostramos el error en consola
           fs.writeFileSync(file, fs.readFileSync(path));//Escribimos al directorio nuevo del directorio viejo
-          connection.query('INSERT INTO producto(nombre,precio,ruta,detalle,fecha_creado,vendedor_idvendedor) VALUES("'+req.fields.nombre+'","'+req.fields.precio+'","'+file+'","'+req.fields.detalles+'","'+date+'","'+user_id+'")', function (error, results, fields) {
+          connection.query('INSERT INTO producto(nombre,precio,ruta,detalle,fecha_creado,vendedor_idvendedor,estado) VALUES("'+req.fields.nombre+'","'+req.fields.precio+'","'+file+'","'+req.fields.detalles+'","'+date+'","'+user_id+'","activo")', function (error, results, fields) {
             if (error) throw error;
             console.log(results);
             if(results.affectedRows>=1)
@@ -229,8 +229,6 @@ app.post('/finishShop',  (req, res)=> {
   let date=moment().format('YYYY-MM-DD hh:mm:ss');//obtenemos la fecha y hora
   connection.query('INSERT INTO venta(fecha_de_venta,total,vendedor_idvendedor) VALUES("'+date+'",'+req.fields.total+',"'+req.fields.user_id+'")', function (error, results, fields) {
     if (error) throw error;
-    console.log(results);
-    //Eliminamos el fichero si y solo si fue eliminado de la base de datos
     res.status(200).send(JSON.stringify(results));
   });
 });
@@ -263,3 +261,70 @@ app.post('/finishShop2',  (req, res)=> {
     }
   );
 });
+
+
+app.post('/ventasPorProducto', (req, res) => {
+  console.log('ventasPorProducto');
+  connection.query(`SELECT p.idproducto,p.nombre,p.detalle, sum(dv.subtotal) as venta
+                    FROM producto as p 
+                    JOIN detalle_venta as dv 
+                    ON p.idproducto=dv.producto_idproducto 
+                    JOIN vendedor as v
+                    ON v.idvendedor=p.vendedor_idvendedor
+                    WHERE v.idvendedor="${req.fields.user_id}"
+                    GROUP BY(p.idproducto)`, function (error, results, fields) {
+        if (error)
+        {
+          throw error;
+        }      
+        console.log(results.length);
+    setTimeout(() => {
+      res.status(200).send(JSON.stringify(results));
+    }, 1500);     
+  });
+});
+
+app.post('/ventas', (req, res) => {
+  console.log('ventas');
+  connection.query(`SELECT ve.idventa,ve.fecha_de_venta,ve.total
+                    FROM venta as ve
+                    JOIN detalle_venta as dv 
+                    ON ve.idventa=dv.venta_idventa
+                    JOIN producto as p 
+                    ON p.idproducto=dv.producto_idproducto
+                    JOIN vendedor as v
+                    ON v.idvendedor=p.vendedor_idvendedor
+                    WHERE v.idvendedor="${req.fields.user_id}"
+                    GROUP BY(ve.idventa)`, function (error, results, fields) {
+        if (error)
+        {
+          throw error;
+        }      
+        console.log(results.length);
+    setTimeout(() => {
+      res.status(200).send(JSON.stringify(results));
+    }, 1500);     
+  });
+});
+
+
+app.post('/promedioDePrecios', (req, res) => {
+  console.log('promedioDePrecios');
+  connection.query(`SELECT COUNT(idproducto) as producto,
+                    AVG(p.precio) as promedio
+                    FROM producto as p
+                    JOIN vendedor v
+                    ON v.idvendedor=p.vendedor_idvendedor
+                    WHERE v.idvendedor="${req.fields.user_id}"`, function (error, results, fields) {
+        if (error)
+        {
+          throw error;
+        }      
+        console.log(results.length);
+    setTimeout(() => {
+      res.status(200).send(JSON.stringify(results));
+    }, 1500);     
+  });
+});
+
+
