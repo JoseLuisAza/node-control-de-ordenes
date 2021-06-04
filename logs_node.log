@@ -1,0 +1,178 @@
+[2021-06-04T10:13:56.055] [DEBUG] servidor - control-de-ordenes app escuchando en undefined:undefined
+[2021-06-04T10:13:56.081] [DEBUG] servidor - control-de-ordenes app escuchando en undefined:undefined
+[2021-06-04T10:16:31.823] [DEBUG] servidor - control-de-ordenes app escuchando en undefined:undefined
+[2021-06-04T10:17:21.439] [INFO] ambiente - development
+[2021-06-04T10:17:21.449] [INFO] ambiente - development
+[2021-06-04T10:17:21.824] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:17:21.824] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:17:30.863] [INFO] ambiente - development
+[2021-06-04T10:17:30.866] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:17:30.912] [INFO] ambiente - development
+[2021-06-04T10:17:30.916] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:25:17.186] [INFO] ambiente - development
+[2021-06-04T10:25:17.329] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:25:17.183] [INFO] ambiente - development
+[2021-06-04T10:25:17.329] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:30:15.154] [INFO] ambiente - development
+[2021-06-04T10:30:15.152] [INFO] ambiente - development
+[2021-06-04T10:30:15.273] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:30:15.273] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:31:09.263] [INFO] ambiente - development
+[2021-06-04T10:31:09.268] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:32:27.044] [INFO] ambiente - development
+[2021-06-04T10:32:27.189] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:32:27.042] [INFO] ambiente - development
+[2021-06-04T10:32:27.189] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:33:43.652] [INFO] ambiente - development
+[2021-06-04T10:33:43.657] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:33:48.759] [INFO] ambiente - development
+[2021-06-04T10:33:48.762] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:34:54.865] [INFO] ambiente - development
+[2021-06-04T10:34:54.869] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:35:11.128] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:35:11.129] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:35:11.129] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:35:35.686] [INFO] ambiente - development
+[2021-06-04T10:35:35.690] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:35:38.413] [INFO] ambiente - development
+[2021-06-04T10:35:38.417] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:35:40.971] [INFO] ambiente - development
+[2021-06-04T10:35:40.975] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:37:37.552] [INFO] ambiente - development
+[2021-06-04T10:37:37.556] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:37:37.586] [INFO] ambiente - development
+[2021-06-04T10:37:37.590] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:38:49.173] [INFO] ambiente - development
+[2021-06-04T10:38:49.178] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:39:16.219] [INFO] ambiente - development
+[2021-06-04T10:39:16.225] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:39:54.713] [INFO] ambiente - development
+[2021-06-04T10:39:54.719] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:40:05.625] [INFO] ambiente - development
+[2021-06-04T10:40:05.631] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:40:36.972] [INFO] ambiente - development
+[2021-06-04T10:40:36.978] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:41:02.858] [INFO] ambiente - development
+[2021-06-04T10:41:02.864] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:41:51.999] [INFO] ambiente - development
+[2021-06-04T10:41:52.004] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:42:15.103] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:42:15.104] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:42:15.104] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:42:53.867] [INFO] ambiente - development
+[2021-06-04T10:42:53.874] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:43:01.721] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:01.724] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:01.724] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:43:15.445] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:15.445] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:15.445] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:43:25.140] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:25.140] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:25.140] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:43:34.892] [INFO] ambiente - development
+[2021-06-04T10:43:34.911] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T10:43:42.122] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:42.123] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:42.123] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T10:43:52.253] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:52.253] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:52.253] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:43:52.286] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:52.286] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:52.286] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:43:52.313] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:52.314] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:52.314] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:43:52.321] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:52.321] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:52.321] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:43:59.246] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:59.246] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:59.246] [INFO] cors - Peticion hacia el path: /reportes/ventasPorProducto
+[2021-06-04T10:43:59.260] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:43:59.261] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:43:59.261] [INFO] cors - Peticion hacia el path: /reportes/ventasPorProducto
+[2021-06-04T10:44:03.807] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:03.807] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:03.807] [INFO] cors - Peticion hacia el path: /reportes/ventas
+[2021-06-04T10:44:03.831] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:03.831] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:03.831] [INFO] cors - Peticion hacia el path: /reportes/ventas
+[2021-06-04T10:44:06.785] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:06.785] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:06.785] [INFO] cors - Peticion hacia el path: /reportes/promedioDePrecios
+[2021-06-04T10:44:06.799] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:06.799] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:06.800] [INFO] cors - Peticion hacia el path: /reportes/promedioDePrecios
+[2021-06-04T10:44:10.196] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:10.196] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:10.196] [INFO] cors - Peticion hacia el path: /reportes/ventasPorProducto
+[2021-06-04T10:44:10.214] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:10.214] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:10.215] [INFO] cors - Peticion hacia el path: /reportes/ventasPorProducto
+[2021-06-04T10:44:13.286] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:13.287] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:13.287] [INFO] cors - Peticion hacia el path: /reportes/ventas
+[2021-06-04T10:44:13.309] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:13.309] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:13.310] [INFO] cors - Peticion hacia el path: /reportes/ventas
+[2021-06-04T10:44:17.146] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:17.146] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:17.147] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:17.158] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:17.158] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:17.158] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:17.185] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:17.185] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:17.185] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:44:17.201] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:17.201] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:17.201] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:44:25.347] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:25.347] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:25.347] [INFO] cors - Peticion hacia el path: /tienda/getArticulosGeneral
+[2021-06-04T10:44:25.394] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:25.394] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:25.394] [INFO] cors - Peticion hacia el path: /tienda/getArticulosGeneral
+[2021-06-04T10:44:26.694] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:26.694] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:26.695] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:26.742] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:26.742] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:26.743] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:44:26.747] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:26.748] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:26.748] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:26.754] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:26.754] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:26.754] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:44:39.645] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:39.645] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:39.645] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:39.652] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:39.652] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:39.652] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:44:39.660] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:39.661] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:39.661] [INFO] cors - Peticion hacia el path: /usuario/isUserRegistered
+[2021-06-04T10:44:39.668] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T10:44:39.669] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T10:44:39.669] [INFO] cors - Peticion hacia el path: /usuario/getArticulos
+[2021-06-04T10:45:43.635] [INFO] ambiente - development
+[2021-06-04T10:45:43.657] [DEBUG] servidor - control-de-ordenes app escuchando en localhost:3000
+[2021-06-04T11:11:24.533] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T11:11:24.538] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T11:11:24.538] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T11:11:29.639] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T11:11:29.639] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T11:11:29.639] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T11:16:45.807] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T11:16:45.807] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T11:16:45.808] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T11:17:44.380] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T11:17:44.380] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T11:17:44.380] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
+[2021-06-04T11:46:35.890] [INFO] cors - Verificando origin: http://localhost:4200
+[2021-06-04T11:46:36.168] [INFO] cors - Origin permitido: http://localhost:4200
+[2021-06-04T11:46:36.192] [INFO] cors - Peticion hacia el path: /publico/getArticulosStore
