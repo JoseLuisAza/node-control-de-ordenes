@@ -29,5 +29,10 @@ const log4js = require("log4js");
       categories: { default: { appenders: ["app"], level: "ALL" } },
       disableClustering: true,
     },
+    {
+      appenders: { auth0: { type: "file", filename: "logs_node.log" } },
+      categories: { default: { appenders: ["auth0"], level: "ALL" } },
+      disableClustering: true,
+    },
   );
   module.exports = log4js;

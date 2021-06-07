@@ -6,6 +6,7 @@ const logger = log4js.getLogger('cors');
 
 const cors=function (req, res, next)
 {
+    console.log(req);
     //Origes de la solicitud permitidos.
     let allowedOrigins = [
     "http://localhost",

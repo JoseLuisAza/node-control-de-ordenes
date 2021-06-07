@@ -4,13 +4,16 @@ const rxjs = require('rxjs');//modulo de node para manejar archivos y carpetas
 const connection=require("./coneccion_mysql");
 const formidableMiddleware = require('express-formidable');//para manejar multipart/form-data
 const cors=require("../seguridad/cors");
+const checkJwt = require("../seguridad/auth0TokenVerify");
+const checkScopes= require("../seguridad/scopeVerify");
 
 router.use(
-  formidableMiddleware(),
-  cors
+ 
+  cors,
+  formidableMiddleware()
 );
 
-router.post('/getArticulosGeneral', (req, res) => {
+router.post('/getArticulosGeneral',checkJwt,checkScopes, (req, res) => {
     console.log('/getArticulosGeneral');
     connection.query('SELECT idproducto,nombre,precio,ruta,detalle,fecha_creado FROM producto WHERE estado="activo" AND vendedor_idvendedor !="'+req.fields.user_id+'"', function (error, results, fields) {
         if (error)
