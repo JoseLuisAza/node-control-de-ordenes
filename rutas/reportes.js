@@ -3,6 +3,8 @@ var router = express.Router();
 const connection=require("./coneccion_mysql");
 const formidableMiddleware = require('express-formidable');//para manejar multipart/form-data
 const cors=require("../seguridad/cors");
+const checkScopes = require('../seguridad/scopeVerify');
+const checkJwt = require('../seguridad/auth0TokenVerify');
 
 router.use(
   formidableMiddleware(),
@@ -10,7 +12,7 @@ router.use(
 );
 
 
-router.post('/ventasPorProducto', (req, res) => {
+router.post('/ventasPorProducto',checkJwt,checkScopes, (req, res) => {
     console.log('ventasPorProducto');
     connection.query(`SELECT p.idproducto,p.nombre,p.detalle, sum(dv.subtotal) as venta
                       FROM producto as p 
@@ -31,7 +33,7 @@ router.post('/ventasPorProducto', (req, res) => {
     });
   });
   
-  router.post('/ventas', (req, res) => {
+  router.post('/ventas', checkJwt, checkScopes,(req, res) => {
     console.log('ventas');
     connection.query(`SELECT ve.idventa,ve.fecha_de_venta,ve.total
                       FROM venta as ve
@@ -55,7 +57,7 @@ router.post('/ventasPorProducto', (req, res) => {
   });
   
   
-  router.post('/promedioDePrecios', (req, res) => {
+  router.post('/promedioDePrecios',checkJwt,checkScopes, (req, res) => {
     console.log('promedioDePrecios');
     connection.query(`SELECT COUNT(idproducto) as producto,
                       AVG(p.precio) as promedio

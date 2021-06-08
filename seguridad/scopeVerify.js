@@ -10,9 +10,10 @@ logAuth0.info("Iniciando scopeVerify");
 console.log("Iniciando scopeVerify");
 //a traves de la funcion jwtAuthz se verifica si el token tiene el scope 'read:messages'
 var options = {
-    customScopeKey: 'permissions'
+    customScopeKey: 'permissions',
+    checkAllScopes: true
 };
-const checkScopes=jwtAuthz(['read:items'],options);
+const checkScopes=jwtAuthz(['read:items','read:reportes'],options);
 
 // se exporta del archivo la constante checkScopes
 module.exports = checkScopes;
